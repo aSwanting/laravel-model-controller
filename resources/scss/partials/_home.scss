@@ -1,0 +1,67 @@
+.container-fluid {
+    height: 100vh;
+    overflow: auto;
+
+    .grid-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 80px;
+        padding: 40px;
+
+        .grid-item {
+            aspect-ratio: 1;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            color: white;
+            background-color: rgba(138, 255, 173, 0.15);
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+
+            .movie-card {
+                max-width: 70%;
+                .movie-card-header {
+                    padding-top: 5%;
+                    h3 {
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        font-size: 20px;
+                        margin: 0;
+                    }
+                    p {
+                        font-style: italic;
+                        font-size: 14px;
+                    }
+                }
+                .movie-details {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li:not(:last-child) {
+                        margin-bottom: 12px;
+                    }
+
+                    li p {
+                        margin: 0;
+                        padding: 0;
+
+                        &:first-child {
+                            font-style: italic;
+                            font-size: 12px;
+                            line-height: 10px;
+                        }
+
+                        &:last-child {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

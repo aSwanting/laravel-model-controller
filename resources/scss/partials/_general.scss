@@ -1,0 +1,15 @@
+body {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(102, 192, 192, 0.466);
+}

@@ -1,25 +1,34 @@
 @extends('layouts.app')
 @section('title', 'home sweet home')
 @section('main')
-    <div class="container">
-        <div class="row">
+    <div class="container-fluid">
+        <div class="grid-wrapper">
             @foreach ($movies as $movie)
-                <div class="col-4 gy-3">
-                    <div class="card h-100">
-                        <div class="card-header">
-                            <h3>{{ $movie->title }}</h2>
-                                <p>{{ $movie->original_title }}</p>
+                <div class="grid-item">
+                    <div class="movie-card">
+                        <div class="movie-card-header">
+                            <h3>{{ $movie->title }}</h3>
+                            <p>{{ $movie->original_title }}</p>
                         </div>
-                        <div class="card-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">{{ $movie->nationality }}</li>
-                                <li class="list-group-item">{{ $movie->date }}</li>
-                                <li class="list-group-item">{{ $movie->vote }}</li>
-                            </ul>
-                        </div>
+                        <ul class="movie-details">
+                            <li>
+                                <p>Nationality</p>
+                                <p>{{ $movie->nationality }}</p>
+                            </li>
+                            <li>
+                                <p>Release Date:</p>
+                                <p>{{ $movie->date }}</p>
+                            </li>
+                            <li>
+                                <p>Rating</p>
+                                <p>{{ $movie->vote }}</p>
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
             @endforeach
         </div>
+    </div>
     </div>
 @endsection
